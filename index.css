@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+#playerContainer {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.character img {
+    width: 100px;
+}
+
+#battleLog {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 150px;
+    overflow-y: auto;
+    border: 1px solid #333;
+    padding: 10px;
+    background: #111;
+    color: #fff;
+}
