@@ -1,32 +1,57 @@
-import { heros } from "./utility/characters/heros.js";
-import { boss } from "./utility/characters/boss.js";
+import { heros } from "./characters/heros.js";
+import { boss } from "./characters/boss.js";
 
 const gameData = {
     heros,
     boss,
 };
+console.log(gameData);
 
-const updateUI = () => {
-    const bossName = document.getElementById("bossName");
-    const bossHealth = document.getElementById("bossHealth");
-    const hero1Name = document.getElementById("hero1Name");
-    const hero1Health = document.getElementById("hero1Health");
-    const hero2Name = document.getElementById("hero2Name");
-    const hero2Health = document.getElementById("hero2Health");
-    const hero3Name = document.getElementById("hero3Name");
-    const hero3Health = document.getElementById("hero3Health");
+function updateUi() {
+    // hero UI
 
-    bossName.innerText = gameData.boss.name;
-    bossHealth.innerText = `Health: ${gameData.boss.health}`;
+    for (let i = 0; i < gameData.heros.length; i++) {
+        const hero = gameData.heros[i];
 
-    hero1Name.innerText = gameData.heros[0].name;
-    hero1Health.innerText = `Health: ${gameData.heros[0].health}`;
+        // hero health text
+        const health = document.getElementById(
+            `${hero.class.toLowerCase()}-health-txt`
+        );
+        health.innerHTML = `Health: ${hero.currentHealth} / ${hero.maxHealth} HP`;
+        const name = document.getElementById(
+            `${hero.class.toLowerCase()}-name-txt`
+        );
+        name.innerHTML = hero.name;
 
-    hero2Name.innerText = gameData.heros[1].name;
-    hero2Health.innerText = `Health: ${gameData.heros[1].health}`;
+        // hero health bar
+        const healthBar = document.getElementById(
+            `${hero.class.toLowerCase()}-health`
+        );
+        healthBar.style.width = `${
+            (hero.currentHealth / hero.maxHealth) * 300
+        }px`;
+    }
 
-    hero3Name.innerText = gameData.heros[2].name;
-    hero3Health.innerText = `Health: ${gameData.heros[2].health}`;
-};
+    // // boss UI
+    const dragonHealthTxt = document.getElementById("dragon-health-txt");
+    dragonHealthTxt.innerHTML = `Health: ${gameData.boss[0].currentHealth} / ${gameData.boss[0].maxHealth} HP`;
+    const dragonName = document.getElementById("dragon-name-txt");
+    dragonName.innerHTML = gameData.boss[0].name;
 
-updateUI();
+    const dragonHealthBar = document.getElementById("dragon-health");
+
+    // Boss Health Bar
+    dragonHealthBar.style.width = `${
+        (gameData.boss[0].currentHealth / gameData.boss[0].maxHealth) * 300
+    }px`;
+}
+
+updateUi();
+
+// function takeDamage() {
+//     const damage = 100; // Example damage value
+//     gameData.heros[0].currentHealth -= damage;
+//     updateUi();
+// }
+
+// takeDamage();

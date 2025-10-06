@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Arbeidskrav PGR102</title>
+        <link rel="stylesheet" href="arbeidskrav.css" />
+        <script type="module" src="index.js" defer></script>
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="hero-health-containers">
+                <div class="healthbar-container">
+                    <div id="healer-health" class="healthbar"></div>
+                    <div class="text-container">
+                        <p id="healer-name-txt"></p>
+                        <p id="healer-health-txt"></p>
+                    </div>
+                </div>
+                <div class="healthbar-container">
+                    <div id="archer-health" class="healthbar"></div>
+                    <div class="text-container">
+                        <p id="archer-name-txt"></p>
+                        <p id="archer-health-txt"></p>
+                    </div>
+                </div>
+                <div class="healthbar-container">
+                    <div id="warrior-health" class="healthbar"></div>
+                    <div class="text-container">
+                        <p id="warrior-name-txt"></p>
+                        <p id="warrior-health-txt"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dragon-health-container">
+                <div class="healthbar-container">
+                    <div id="dragon-health" class="healthbar"></div>
+                    <div class="text-container">
+                        <p id="dragon-name-txt"></p>
+                        <div
+                            id="dragon-health-txt"
+                            class="text-container"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bildecontainere for heroene. Disse bilde-containerne skal kunne trykkes på  -->
+            <div id="healer" class="img-container">
+                <img class="hero" src="assets/healer.png" />
+            </div>
+            <div id="archer" class="img-container">
+                <img class="hero" src="assets/archer.png" />
+            </div>
+            <div id="warrior" class="img-container">
+                <img class="hero" src="assets\warrior.png" />
+            </div>
+
+            <!-- Bildecontainer for fienden -->
+            <div id="dragon" class="img-container">
+                <img id="dragon-img" src="assets\dragon.png" />
+            </div>
+        </div>
+    </body>
+</html>
