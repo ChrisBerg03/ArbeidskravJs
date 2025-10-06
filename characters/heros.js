@@ -6,10 +6,7 @@ const heros = [
         currentHealth: 800,
         class: "Warrior",
         alive: true,
-        ability: [
-            { type: "bash", damage: 70 },
-            { type: "earthquake", damage: 250 },
-        ],
+        damage: 200,
     },
     {
         id: 1,
@@ -18,10 +15,7 @@ const heros = [
         currentHealth: 600,
         class: "Archer",
         alive: true,
-        ability: [
-            { type: "pierce", damage: 60 },
-            { type: "multiShot", damage: 150 },
-        ],
+        damage: 400,
     },
     {
         id: 2,
@@ -30,7 +24,8 @@ const heros = [
         currentHealth: 400,
         class: "Healer",
         alive: true,
-        ability: [{ type: "Heal", heal: 100 }],
+        healAmount: 100,
+        damage: 100,
     },
 ];
 export { heros };

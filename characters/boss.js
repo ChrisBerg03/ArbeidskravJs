@@ -5,10 +5,7 @@ const boss = [
         maxHealth: 2000,
         currentHealth: 2000,
         class: "Dragon",
-        ability: [
-            { type: "fireBreath", damage: 100 },
-            { type: "tailSwipe", damage: 250 },
-        ],
+        damage: 200,
     },
 ];
 export { boss };
