@@ -7,6 +7,9 @@ body {
     width: 100dvw;
     height: 100dvh;
     overflow: hidden;
+    background-image: url("/images/background-img.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #playerContainer {
