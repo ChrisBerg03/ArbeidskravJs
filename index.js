@@ -1,5 +1,6 @@
 import { heros } from "./characters/heros.js";
 import { boss } from "./characters/boss.js";
+const fireballSound = new Audio("/assets/sounds/fireball.mp3");
 const gameData = {
     heros,
     boss,
@@ -122,6 +123,7 @@ function archerAttack() {
 function bossAttack() {
     console.log("boss attack");
 
+    fireballSound.play();
     // collect all alive heroes
     const aliveHeroes = gameData.heros.filter((h) => h.currentHealth > 0);
     if (aliveHeroes.length === 0) return; // no targets left
